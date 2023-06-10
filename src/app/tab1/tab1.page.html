@@ -1,0 +1,63 @@
+<!-- <ion-header [translucent]="true"> -->
+<!-- <ion-toolbar>
+    <ion-title>login-user</ion-title>
+  </ion-toolbar> -->
+<!-- </ion-header> -->
+
+<ion-content [fullscreen]="true">
+  
+  <br><br><br>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><b> Login </b></ion-card-title>
+      <ion-card-subtitle>Masukan NIS dan Password dengan benar</ion-card-subtitle>
+      <!-- <ion-card-subtitle>Masukan Username dan password dengan benar</ion-card-subtitle> -->
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-input type="number" label="NIK"  expand="block"label-placement="floating"
+        fill="outline" placeholder="Nomor Induk Keluarga" [(ngModel)]="form.nik"></ion-input>
+      <br>
+      <ion-input type="text" label="Nama" expand="block"label-placement="floating"
+        fill="outline" placeholder="Nama" [(ngModel)]="form.nama"></ion-input>
+      <br>
+      <ion-input type="text" label="Tempat Lahir"  expand="block"label-placement="floating"
+        fill="outline" placeholder="Tempat Lahir" [(ngModel)]="form.tempat_lahir"></ion-input>
+      <br>
+      <ion-input type="date" label="Tanggal Lahir"  expand="block"label-placement="floating"
+        fill="outline" placeholder="Tanggal Lahir" [(ngModel)]="form.tanggal_lahir"></ion-input>
+      <br>
+      <ion-input  label="Alamat" type="text" expand="block"label-placement="floating"
+        fill="outline" placeholder="Alamat" [(ngModel)]="form.alamat"></ion-input>
+      <br>
+      <!-- <ion-input  label="Jenis Kelamin" type="password"  label-placement="floating"
+        fill="outline" placeholder="Jenis Kelamin"></ion-input> -->
+        <ion-label position="floating">Jenis Kelamin</ion-label>
+      <ion-select [(ngModel)]="form.jenis_kelamin" >
+        <ion-select-option value="L">Laki-laki</ion-select-option>
+        <ion-select-option value="P">Perempuan</ion-select-option>
+      </ion-select>
+      <br>
+      <!-- send button -->
+    <ion-button  color="success" expand="block" (click)="sendToWhatsapp()">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      Kirim Ke Whatsapp
+    </ion-button>
+
+    <!-- send to telegram button -->
+    <ion-button expand="block" (click)="sendToTelegram()">
+      <ion-icon name="send"></ion-icon>
+      Kirim Ke Telegram
+    </ion-button>
+
+    <!-- send to email button -->
+    <ion-button color="danger" expand="block" (click)="sendToEmail()">
+      <ion-icon name="mail-open-outline"></ion-icon>
+       Kirim Ke Email
+    </ion-button>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+    
